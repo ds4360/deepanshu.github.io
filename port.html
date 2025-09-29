@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background:silver;
+      color: black;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 15px;
+    }
+    header h1 { margin-bottom: 10px; }
+    nav a {
+      color: black;
+      margin: 70px;
+      text-decoration: none;
+      font-weight: bold;
+
+    }
+    nav a:hover {
+
+color: orange;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #222;
+    }
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: silver;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+      margin-top: 20px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .bb{
+      color: orange;
+      font-size: 30px;
+    }
+    form button:hover { background: #555; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MY <span class="bb">PORTFOLIO</span></h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2><span class="bb">About</span> Me</h2>
+
+    <p>Hii ! I Deepanshu Sagar Iam  20 year old I belong to a nuclear family. My strengths are, that I am self-motivated hard-working, and a disciplined person. My strengths are, that I am self-motivated, a hard worker, and a good Lerner. My short-term goal is to get a job in a reputed company and my long-term goal is to get a good position.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">HTML - Structure of web pages</div>
+      <div class="card">CSS - Styling & Responsive Design</div>
+      <div class="card">JavaScript - Interactivity & Logic</div>
+      <div class="card">Sql - Data base</div>
+      <div class="card">Bootstrap</div>
+
+
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Project 1</h3>
+        <a href="file:///C:/Users/Dell/Documents/website/google-website.html">Design</a>
+      </div>
+      <div class="card">
+        
+        <h3>Project 2</h3>
+        <a href="file:///C:/Users/Dell/Documents/Deepanshu%20d.website/tia-tea%20toy.html">game</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="return sendMessage(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="msg" style="text-align:center; margin-top:10px; color:green;"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Deepanshu | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function sendMessage(e){
+      e.preventDefault();
+      document.getElementById("msg").innerText = "Message sent successfully!";
+    }
+  </script>
+
+</body>
+</html>
